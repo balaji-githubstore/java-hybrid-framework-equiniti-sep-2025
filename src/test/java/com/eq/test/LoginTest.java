@@ -1,10 +1,10 @@
 package com.eq.test;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.eq.base.AutomationWrapper;
+import com.eq.pages.DashboardPage;
 import com.eq.pages.LoginPage;
 
 public class LoginTest extends AutomationWrapper {
@@ -17,7 +17,8 @@ public class LoginTest extends AutomationWrapper {
 		login.enterPassword("admin123");
 		login.clickOnLogin();
 
-		String actualText = driver.findElement(By.xpath("//p[contains(normalize-space(),'Time at')]")).getText();
+		DashboardPage dashboard = new DashboardPage(driver);
+		String actualText = dashboard.getTimeAtWorkText();
 		Assert.assertEquals(actualText, "Time at Work");
 	}
 

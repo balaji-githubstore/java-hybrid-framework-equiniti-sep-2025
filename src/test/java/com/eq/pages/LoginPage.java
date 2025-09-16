@@ -2,9 +2,14 @@ package com.eq.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
 
 public class LoginPage {
+
+	private By usernameLocator = By.name("username");
+	private By passwordLocator = By.name("password");
+	private By loginLocator = By
+			.xpath("//button[contains(normalize-space(),'Login') or contains(normalize-space(),'登录')]");
+	private By errorLocator = By.xpath("//p[contains(normalize-space(),'Invalid')]");
 
 	private WebDriver driver;
 
@@ -13,19 +18,22 @@ public class LoginPage {
 	}
 
 	public void enterUsername(String username) {
-		driver.findElement(By.name("username")).sendKeys(username);
+		driver.findElement(usernameLocator).sendKeys(username);
 	}
 
 	public void enterPassword(String password) {
-		driver.findElement(By.name("password")).sendKeys(password);
+		driver.findElement(passwordLocator).sendKeys(password);
 	}
 
 	public void clickOnLogin() {
-		driver.findElement(
-				By.xpath("//button[contains(normalize-space(),'Login') or contains(normalize-space(),'登录')]")).click();
+		driver.findElement(loginLocator).click();
 	}
 
 	public String getInvalidErrorMessage() {
-		return driver.findElement(By.xpath("//p[contains(normalize-space(),'Invalid')]")).getText();
+		return driver.findElement(errorLocator).getText();
+	}
+
+	public String getUsernamePlaceholder() {
+		return driver.findElement(usernameLocator).getAttribute("placeholder");
 	}
 }

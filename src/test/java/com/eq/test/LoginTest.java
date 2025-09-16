@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import com.eq.base.AutomationWrapper;
 import com.eq.pages.DashboardPage;
 import com.eq.pages.LoginPage;
+import com.eq.utilities.DataSource;
 
 public class LoginTest extends AutomationWrapper {
 
@@ -22,16 +23,16 @@ public class LoginTest extends AutomationWrapper {
 		Assert.assertEquals(actualText, "Time at Work");
 	}
 
-	@Test
-	public void invalidLoginTest() {
+	@Test(dataProvider = "invalidLoginData", dataProviderClass = DataSource.class)
+	public void invalidLoginTest(String username, String password, String expectedError) {
 
 		LoginPage login = new LoginPage(driver);
-		login.enterUsername("peter");
-		login.enterPassword("admin123");
+		login.enterUsername(username);
+		login.enterPassword(password);
 		login.clickOnLogin();
 
 		// Assert the Invalid credentials
 		String actualError = login.getInvalidErrorMessage();
-		Assert.assertEquals(actualError, "Invalid credentials");
+		Assert.assertEquals(actualError, expectedError);
 	}
 }

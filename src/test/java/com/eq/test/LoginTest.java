@@ -26,7 +26,7 @@ public class LoginTest extends AutomationWrapper {
 	public void invalidLoginTest() {
 
 		LoginPage login = new LoginPage(driver);
-		login.enterUsername("john");
+		login.enterUsername("peter");
 		login.enterPassword("admin123");
 		login.clickOnLogin();
 

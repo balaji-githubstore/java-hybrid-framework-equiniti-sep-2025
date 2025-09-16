@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class DashboardPage {
-	
-	private By timeAtWorkLocator=By.xpath("//p[contains(normalize-space(),'Time at')]");
+
+	private By timeAtWorkLocator = By.xpath("//p[contains(normalize-space(),'Time at')]");
 
 	private WebDriver driver;
 
@@ -13,8 +13,7 @@ public class DashboardPage {
 		this.driver = driver;
 	}
 
-	public String getTimeAtWorkText()
-	{
+	public String getTimeAtWorkText() {
 		return driver.findElement(timeAtWorkLocator).getText();
 	}
 }

@@ -5,9 +5,9 @@
 	<groupId>com.eq</groupId>
 	<artifactId>EmployeeManagementAutomation</artifactId>
 	<version>1.0</version>
-	
+
 	<dependencies>
-		
+
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
@@ -21,6 +21,17 @@
 			<version>4.35.0</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>5.4.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>5.4.1</version>
+		</dependency>
 
 	</dependencies>
 

@@ -10,20 +10,20 @@ import com.eq.utilities.DataSource;
 
 public class LoginTest extends AutomationWrapper {
 
-	@Test
-	public void validLoginTest() {
+	@Test(dataProvider = "commonDataProvider", dataProviderClass = DataSource.class)
+	public void validLoginTest(String username,String password,String expectedValue) {
 
 		LoginPage login = new LoginPage(driver);
-		login.enterUsername("Admin");
-		login.enterPassword("admin123");
+		login.enterUsername(username);
+		login.enterPassword(password);
 		login.clickOnLogin();
 
 		DashboardPage dashboard = new DashboardPage(driver);
 		String actualText = dashboard.getTimeAtWorkText();
-		Assert.assertEquals(actualText, "Time at Work");
+		Assert.assertEquals(actualText, expectedValue);
 	}
 
-	@Test(dataProvider = "invalidLoginData", dataProviderClass = DataSource.class)
+	@Test(dataProvider = "commonDataProvider", dataProviderClass = DataSource.class)
 	public void invalidLoginTest(String username, String password, String expectedError) {
 
 		LoginPage login = new LoginPage(driver);

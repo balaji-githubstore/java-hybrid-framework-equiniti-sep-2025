@@ -1,83 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="0" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-16T20:13:37 IST" name="Default suite" finished-at="2025-09-16T20:14:04 IST" duration-ms="26351">
+  <suite started-at="2025-09-17T19:31:09 IST" name="OrangeHRM Suite" finished-at="2025-09-17T19:31:09 IST" duration-ms="109">
     <groups>
     </groups>
-    <test started-at="2025-09-16T20:13:37 IST" name="Default test" finished-at="2025-09-16T20:14:04 IST" duration-ms="26351">
-      <class name="com.eq.test.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.eq.test.LoginTest@47eaca72]" started-at="2025-09-16T20:13:37 IST" name="setup" finished-at="2025-09-16T20:13:44 IST" duration-ms="6506" status="PASS">
+    <test started-at="2025-09-17T19:31:09 IST" name="Login UI Test" finished-at="2025-09-17T19:31:09 IST" duration-ms="109">
+      <class name="com.eq.test.LoginUITest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.eq.test.LoginUITest@618b19ad]" started-at="2025-09-17T19:31:09 IST" name="setup" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1758117669371" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
+in D:\Balaji\Company\Equiniti Sep 2025 Java\automation_workspace\EmployeeManagementAutomation\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
+in D:\Balaji\Company\Equiniti Sep 2025 Java\automation_workspace\EmployeeManagementAutomation\testng.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:264)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
+at org.testng.internal.Parameters.createParameters(Parameters.java:690)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="invalidLoginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.eq.test.LoginTest@47eaca72]" started-at="2025-09-16T20:13:44 IST" name="invalidLoginTest" data-provider="invalidLoginData" finished-at="2025-09-16T20:13:46 IST" duration-ms="2495" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[saul]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[saul123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Invalid credentials]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="headerTest()[pri:0, instance:com.eq.test.LoginUITest@618b19ad]" started-at="2025-09-17T19:31:09 IST" name="headerTest" finished-at="2025-09-17T19:31:09 IST" duration-ms="1" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
+in D:\Balaji\Company\Equiniti Sep 2025 Java\automation_workspace\EmployeeManagementAutomation\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
+in D:\Balaji\Company\Equiniti Sep 2025 Java\automation_workspace\EmployeeManagementAutomation\testng.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:264)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
+at org.testng.internal.Parameters.createParameters(Parameters.java:690)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidLoginTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.eq.test.LoginTest@47eaca72]" started-at="2025-09-16T20:13:46 IST" name="teardown" finished-at="2025-09-16T20:13:47 IST" duration-ms="515" status="PASS">
+        </test-method> <!-- headerTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.eq.test.LoginUITest@618b19ad]" started-at="2025-09-17T19:31:09 IST" name="teardown" finished-at="2025-09-17T19:31:09 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.eq.test.LoginTest@47eaca72]" started-at="2025-09-16T20:13:47 IST" name="setup" finished-at="2025-09-16T20:13:52 IST" duration-ms="5416" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.eq.test.LoginUITest@618b19ad]" started-at="2025-09-17T19:31:09 IST" name="setup" finished-at="2025-09-17T19:31:09 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="invalidLoginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.eq.test.LoginTest@47eaca72]" started-at="2025-09-16T20:13:52 IST" name="invalidLoginTest" data-provider="invalidLoginData" finished-at="2025-09-16T20:13:55 IST" duration-ms="2352" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[kim]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[kim123]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Invalid credentials]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="titleTest()[pri:0, instance:com.eq.test.LoginUITest@618b19ad]" started-at="2025-09-17T19:31:09 IST" name="titleTest" finished-at="2025-09-17T19:31:09 IST" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
+in D:\Balaji\Company\Equiniti Sep 2025 Java\automation_workspace\EmployeeManagementAutomation\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
+in D:\Balaji\Company\Equiniti Sep 2025 Java\automation_workspace\EmployeeManagementAutomation\testng.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:264)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
+at org.testng.internal.Parameters.createParameters(Parameters.java:690)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidLoginTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.eq.test.LoginTest@47eaca72]" started-at="2025-09-16T20:13:55 IST" name="teardown" finished-at="2025-09-16T20:13:55 IST" duration-ms="430" status="PASS">
+        </test-method> <!-- titleTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.eq.test.LoginUITest@618b19ad]" started-at="2025-09-17T19:31:09 IST" name="teardown" finished-at="2025-09-17T19:31:09 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.eq.test.LoginTest@47eaca72]" started-at="2025-09-16T20:13:55 IST" name="setup" finished-at="2025-09-16T20:13:58 IST" duration-ms="2801" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="validLoginTest()[pri:0, instance:com.eq.test.LoginTest@47eaca72]" started-at="2025-09-16T20:13:58 IST" name="validLoginTest" finished-at="2025-09-16T20:14:03 IST" duration-ms="5128" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validLoginTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.eq.test.LoginTest@47eaca72]" started-at="2025-09-16T20:14:03 IST" name="teardown" finished-at="2025-09-16T20:14:04 IST" duration-ms="605" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.eq.test.LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.eq.test.LoginUITest -->
+    </test> <!-- Login UI Test -->
+  </suite> <!-- OrangeHRM Suite -->
 </testng-results>

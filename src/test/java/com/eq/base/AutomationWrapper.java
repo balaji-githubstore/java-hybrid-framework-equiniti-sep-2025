@@ -18,12 +18,13 @@ public class AutomationWrapper {
 
 	protected WebDriver driver;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	@Parameters({ "browser" })
 	public void setup(@Optional("ch") String browserName) {
 		if (browserName.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
 		} else if (browserName.equalsIgnoreCase("ff")) {
+
 			driver = new FirefoxDriver();
 		} else {
 			System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
@@ -35,8 +36,13 @@ public class AutomationWrapper {
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void teardown() {
+		
+//		TakesScreenshot ts=(TakesScreenshot) driver;
+//		File file= ts.getScreenshotAs(OutputType.FILE);
+//		file.renameTo(new File("error.png"));
+		
 		driver.quit();
 	}
 }

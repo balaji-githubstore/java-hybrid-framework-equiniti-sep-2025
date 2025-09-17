@@ -10,7 +10,7 @@ import com.eq.utilities.DataSource;
 
 public class LoginTest extends AutomationWrapper {
 
-	@Test(dataProvider = "commonDataProvider", dataProviderClass = DataSource.class)
+	@Test(dataProvider = "commonDataProvider", dataProviderClass = DataSource.class,groups = {"smoke"})
 	public void validLoginTest(String username,String password,String expectedValue) {
 
 		LoginPage login = new LoginPage(driver);

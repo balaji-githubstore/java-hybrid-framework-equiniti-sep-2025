@@ -1,0 +1,24 @@
+{
+	"browser":"chrome",
+	
+  "validData": [
+    {
+      "username": "user1",
+      "password": "pass1",
+	  "ExpectedError":"Invalid credentials"
+    },
+    {
+      "username": "user2",
+      "password": "pass2",
+	  "ExpectedError":"Invalid credentials"
+    }
+  ],
+  
+  "validData1": [
+	["saul", "saul123","Invalid credentials"], 
+	["kim", "kim123","Invalid credentials"],
+    ["kim", "kim123","Invalid credentials"]
+	]
+  
+  
+}

@@ -5,12 +5,12 @@
     {
       "username": "user1",
       "password": "pass1",
-	  "ExpectedError":"Invalid credentials"
+	  "expectedError":"Invalid credentials"
     },
     {
       "username": "user2",
       "password": "pass2",
-	  "ExpectedError":"Invalid credentials"
+	  "expectedError":"Invalid credentials"
     }
   ],
   
